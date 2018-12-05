@@ -21,7 +21,7 @@ ideally you should use something like this to install it:
 
 # Usage
 
-For example you can combine it with [waigo](https://github.com/mkmik/waigo) so it can show 
+For example you can combine it with [waigo](https://github.com/mkmik/waigo) so it can show test and build errors for the package under the current directory:
 
 ```
 arepa -t waigo go test
