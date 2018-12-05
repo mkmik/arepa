@@ -27,3 +27,4 @@ For example you can combine it with [waigo](https://github.com/mkmik/waigo) so i
 arepa -t waigo go test
 ```
 
+(which I wrap in a smaller shell script called `ago` which does `exec arepa -t waigo go "$@"`)
