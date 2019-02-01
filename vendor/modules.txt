@@ -1,0 +1,8 @@
+# 9fans.net/go v0.0.0-20181112161441-237454027057
+9fans.net/go/acme
+9fans.net/go/draw
+9fans.net/go/plan9
+9fans.net/go/plan9/client
+9fans.net/go/draw/drawfcall
+# github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+github.com/golang/glog
