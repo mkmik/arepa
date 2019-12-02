@@ -78,7 +78,11 @@ func runner(win *acme.Win, needrun <-chan bool, args []string) {
 }
 
 func runCmd(win *acme.Win, args []string) error {
+	win.Ctl("dirty")
+
+	glog.Infof("running cmd: %q", args)
 	b, cerr := exec.Command(args[0], args[1:]...).CombinedOutput()
+	glog.Infof("cmd completed with: %v", cerr)
 	glog.V(2).Infof("out: %s", b)
 
 	win.Addr(",")
