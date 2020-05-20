@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -22,7 +21,7 @@ func mainE(triggerCmd string, args []string) error {
 
 	win, err := acme.New()
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	pwd, _ := os.Getwd()
 	win.Name(pwd + "/+arepa")
