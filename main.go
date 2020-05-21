@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"9fans.net/go/acme"
+	"github.com/bitnami-labs/flagenv"
 	"github.com/golang/glog"
 )
 
@@ -109,6 +110,7 @@ func runCmd(win *acme.Win, args []string) error {
 }
 
 func main() {
+	flagenv.SetFlagsFromEnv("AREPA", flag.CommandLine)
 	flag.Parse()
 	if err := mainE(*triggerCmd, flag.Args()); err != nil {
 		glog.Fatal(err)
