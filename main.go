@@ -33,6 +33,10 @@ func mainE(triggerCmd string, args []string) error {
 
 	// if no trigger command is specified, then only react to manual "Get" commands.
 	if triggerCmd == "" {
+		// trigger once automatically
+		go func() {
+			needrun <- true
+		}()
 		select {}
 	}
 
